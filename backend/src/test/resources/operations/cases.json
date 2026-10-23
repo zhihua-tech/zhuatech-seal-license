@@ -1,0 +1,57 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "remainingBefore": "#7",
+      "remainingAfter": "#2",
+      "effectiveDaysLeft": "#9"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "requestedCopies": "8"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "copyShortfall": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "authorizationEnd": "2026-10-22"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "licenseEnd": "2026-10-24"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "usedCopies": "11"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "requestedCopies": "7"
+    },
+    "expected": {
+      "decision": "PASS",
+      "remainingAfter": "#0"
+    },
+    "error": false
+  }
+]
